@@ -1,7 +1,9 @@
 import requests
 import json
 
+#
 # Don't touch this
+#
 STATUS = 'Fail'
 TEXT_TO_FIND = 'placeat quia et porro iste'
 URLS = dict(
@@ -23,7 +25,9 @@ class User:
         self.posts = []
 
 
-# Work on this -
+#
+# Work on this
+#
 for user in users_response:
     new_user = User(
         id=user['id'],
@@ -38,7 +42,9 @@ for user in users_response:
     users.append(new_user)
 
 
+#
 # Dont touch this
+#
 if users[8].posts[5]['title'] == TEXT_TO_FIND:
     STATUS = 'Success'
 print(f'End result: {STATUS}')
