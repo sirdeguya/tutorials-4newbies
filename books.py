@@ -23,17 +23,18 @@ class User:
         self.posts = []
 
 
+# Work on this -
 for user in users_response:
     new_user = User(
         id=user['id'],
         name=user['name'],
-        username=user['username'],
+        username=user['user_name'],
         email=user['email'],
         phone=user['phone'],
     )
     for post in posts_response:
-        if post['userId'] == new_user.id:
-            new_user.posts.append(post)
+        if post['user_id'] == new_user.id:
+            new_user.post.append(post)
     users.append(new_user)
 
 
